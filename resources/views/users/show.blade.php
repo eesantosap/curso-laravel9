@@ -3,7 +3,7 @@
 @section('title', 'Detalhes do Usuário')
 
 @section('content')
-    <h1>Lista de Usuários {{ $user->name }}</h1>
+    <h1class="text-2x1 font-semibold leading-tigh py-2">Lista de Usuários {{ $user->name }}</h1>
     <ul>
         <li>{{ $user->name }}</li>
         <li>{{ $user->email }}</li>

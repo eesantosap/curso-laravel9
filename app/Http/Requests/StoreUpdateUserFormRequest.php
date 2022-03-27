@@ -37,7 +37,7 @@ class StoreUpdateUserFormRequest extends FormRequest
                 'nullable',
                 'min:6',
                 'max:15',
-            ]
+            ];
         }
 
         return $rules;
