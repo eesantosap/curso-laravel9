@@ -105,4 +105,24 @@ class UserController extends Controller
 
     }
 
+    public function destroy($id)
+    {
+        
+        //$user = User::where('id', $id)->first();
+
+        if (!$user = $this->model->find($id))
+            return redirect()->route('users.index');
+        
+        //dd($user);
+        //dd('users.show', $id);
+
+        $user->delete();
+
+        return redirect()->route('users.index');
+
+    }
+
+
+
+
 }

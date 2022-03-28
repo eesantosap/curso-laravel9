@@ -50,11 +50,19 @@ class User extends Authenticatable
                 $query->where('email', $search);
                 $query->orWhere('name', 'LIKE', "%{$search}%");
             }
-            
+
         })->get();
 
         return $users;
 
     }
+
+    public function comments()
+    {
+
+        return $this->hasMany(Comment::class);
+
+    }
+
 
 }
